@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job Page</title>
+    </head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <body>
+    <nav>
+           <ul>
+               <a href="{% url 'logout_user' %}">Logout</a>
+    
+           </ul>
+       </nav>
+    {% for jobs in job %}
+    <div class="job-card">
+        <a href="{%url 'job_detail' jobs.id%}">{{jobs.title}}</a>
+        <p>{{jobs.company}}</p>
+        <p>{{jobs.location}}</p>
+        <p>{{jobs.description}}</p>
+        <p class="salary">{{jobs.salary}}</p>
+        <p>{{jobs.created_at}}</p>
+    </div>
+    {% endfor %}
+
+    <div class="pagination">
+    {% if job.has_previous %}
+    <a href="?page={{job.previous_page_number}}&title={{ request.GET.title }}">Previous</a>
+    {% endif %}
+    
+    {% if job.has_next %}
+    <a href="?page={{ job.next_page_number }}&title={{ request.GET.title }}">Next</a>
+    {% endif %}
+    <p>Page {{ job.number }} of {{ job.paginator.num_pages }}</p>
+
+    </div>
+    <form method="get">
+        <input type="text" name="title" placeholder="Search jobs">
+        <button type="submit">Search</button>
+        
+    </form>
+    
+    
+</body>
+</html>

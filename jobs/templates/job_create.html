@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Create</title>
+</head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <select name="company">
+            {% for com in company %}
+            <option value="{{com.id}}">{{com.name}}</option>
+            {% endfor %}
+        </select>
+
+            <input type="text" name="title" placeholder="Enter title">
+            <input type="text" name="location" placeholder="Enter location">
+            <input type="text" name="description" placeholder="Enter description">
+            <input type="text" name="salary" placeholder="Enter salary">
+            <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+form {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px auto;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.job-card a {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.job-card a:hover {
+    color: orange;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.job-card:hover{
+    box-shadow: 0 5px 15px gray;
+    transform: translateY(-5px);
+}
+
+
+
+
+button{
+    background-color: maroon;
+    color: white;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+
+input{
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.job-card{
+    transition: 0.3s;
+}
+
+nav{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    }
+
+nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 8px 15px;
+}
+
+.pagination a{
+    border: 2px solid grey;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+.job-card{
+    width: 350px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+
+.pagination{
+    text-align: center;
+}
+
+
+.salary{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.job-detail {
+    width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.job-detail p:first-child {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.job-detail p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.job-detail a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.job-detail a:hover {
+    background-color: red;
+}
